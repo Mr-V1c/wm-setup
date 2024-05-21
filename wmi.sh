@@ -1,3 +1,5 @@
+#!/bin/bash
+
 user=$(id -un)
 
 mkdir -p /home/$user/build
@@ -23,7 +25,6 @@ cd ..
 cd st
 sudo make clean install
 
-cd /home/$user/
 echo 'exec edwm' >> /home/$user/.xsessionrc
 echo 'if [ -z "$DISPLAY" ] && [ $(tty) == /dev/tty1 ]; then\n
 startx\n
